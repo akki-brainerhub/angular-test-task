@@ -1,0 +1,187 @@
+<div class="modal-content">
+
+	<div class="modal-header">
+		<div class="modal-title h4" id="example-modal-sizes-title-lg">
+			<ng-container>
+				<ng-container>Create</ng-container>
+				Contacts
+			</ng-container>
+		</div>
+	</div>
+
+	<div class="overlay overlay-block cursor-default modal-body">
+		<ng-container>
+			<form action="#" class="form form-label-right" [formGroup]="formGroup">
+				<div class="form-group row">
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Id</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="userid"
+							placeholder="Enter Id" autocomplete="off" [class.is-invalid]="isControlInvalid('userid')"
+							[class.is-valid]="isControlValid('userid')" formControlName="userid" />
+						<div class="valid-feedback" *ngIf="isControlValid('userid')">
+							User id was entered correct
+						</div>
+
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'userid')">
+							User id is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('min', 'userid')">
+							User id should have at least 3 digit
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('max', 'userid')">
+							User id should have maximum 6 digit
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Name</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="name"
+							placeholder="Enter Name" autocomplete="off" [class.is-invalid]="isControlInvalid('name')"
+							[class.is-valid]="isControlValid('name')" formControlName="name" />
+						<div class="valid-feedback" *ngIf="isControlValid('name')">
+							Name was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'name')">
+							Name is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'name')">
+							Name should have at least 3 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'name')">
+							Name should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+
+						<label class="form-label">Address</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="address"
+							placeholder="Enter Address" autocomplete="off"
+							[class.is-invalid]="isControlInvalid('address')"
+							[class.is-valid]="isControlValid('address')" formControlName="address" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('address')">
+							Address was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'address')">
+							Address is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'address')">
+							Address should have at least 5 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'address')">
+							Address should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">City</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="city"
+							placeholder="Enter City" autocomplete="off" [class.is-invalid]="isControlInvalid('city')"
+							[class.is-valid]="isControlValid('city')" formControlName="city" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('city')">
+							city was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'city')">
+							city is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'city')">
+							city should have at least 5 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'city')">
+							city should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Race</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="race"
+							placeholder="Enter race" autocomplete="off" [class.is-invalid]="isControlInvalid('race')"
+							[class.is-valid]="isControlValid('race')" formControlName="race" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('race')">
+							race was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'race')">
+							race is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'race')">
+							race should have at least 10 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'race')">
+							race should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Driven licence</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="drivenlicence"
+							placeholder="Enter Driven Licence" autocomplete="off"
+							[class.is-invalid]="isControlInvalid('drivenlicence')"
+							[class.is-valid]="isControlValid('drivenlicence')" formControlName="drivenlicence" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('drivenlicence')">
+							Driven licence was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'drivenlicence')">
+							Driven licence is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'drivenlicence')">
+							Driven licence should have at least 15 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'drivenlicence')">
+							Driven licence should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Genere</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="genere"
+							placeholder="Enter genere" autocomplete="off"
+							[class.is-invalid]="isControlInvalid('genere')" [class.is-valid]="isControlValid('genere')"
+							formControlName="genere" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('genere')">
+							Genere was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'genere')">
+							Genere is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'genere')">
+							Genere should have at least 15 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'genere')">
+							Genere should have maximum 50 characters
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<label class="form-label">Blood type</label>
+						<input type="text" class="form-control form-control-lg form-control-solid" name="bloodtype"
+							placeholder="Enter blood Type" autocomplete="off"
+							[class.is-invalid]="isControlInvalid('bloodtype')"
+							[class.is-valid]="isControlValid('bloodtype')" formControlName="bloodtype" />
+
+						<div class="valid-feedback" *ngIf="isControlValid('bloodtype')">
+							Blood type was entered correct
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('required', 'bloodtype')">
+							Blood type is required
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('minlength', 'bloodtype')">
+							Blood type should have at least 15 characters
+						</div>
+						<div class="invalid-feedback" *ngIf="controlHasError('maxlength', 'bloodtype')">
+							Blood type should have maximum 50 characters
+						</div>
+					</div>
+				</div>
+			</form>
+		</ng-container>
+	</div>
+
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light btn-elevate mr-2" (click)="cancel()">
+			Cancel
+		</button>
+		<ng-container>
+			<button type="submit" class="btn btn-primary btn-elevate" (click)="save()" [disabled]="formGroup.invalid">
+				<i class="fa fa-spin fa-spinner" *ngIf="isLoading"></i> Save
+			</button>
+		</ng-container>
+	</div>
+</div>

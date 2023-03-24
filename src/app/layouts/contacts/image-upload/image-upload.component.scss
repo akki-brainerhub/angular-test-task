@@ -1,0 +1,8 @@
+.upload-form-model {
+   input {
+    font-size: 12px;
+    &:focus {
+        box-shadow: unset;
+    }
+   }
+}

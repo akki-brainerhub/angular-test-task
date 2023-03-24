@@ -1,0 +1,65 @@
+<div class="inner-body-wrap">
+	<div class="card card-custom gutter-b">
+		<div class="card-header d-block">
+			<div class="card-title d-flex justify-content-between">
+				<h3 class="card-label">Contacts List</h3>
+				<button type="button" class="btn btn-primary float-end" (click)="create()">Add Contacts</button>
+			</div>
+		</div>
+		<div class="card-body">
+			<!-- begin:Table -->
+			<div class="table-responsive angular-bootstrap-table">
+				<table class="table table-head-custom table-vertical-center overflow-hidden" *ngIf="length > 0">
+					<thead>
+						<th>No</th>
+						<th>Name</th>
+						<th>Address</th>
+						<th>City</th>
+						<th>Driven licence</th>
+						<th>Genere</th>
+						<th>Bloodtype</th>
+						<th>Race</th>
+						<th>Image</th>
+						<th>Action</th>
+					</thead>
+					<tbody>
+						<tr *ngFor="let contacts of contactsList; let i = index;">
+							<td>{{ i + 1}}</td>
+							<td>{{contacts?.name}}</td>
+							<td>{{contacts?.address}}</td>
+							<td>{{contacts?.city}}</td>
+							<td>{{contacts?.drivenlicence}}</td>
+							<td>{{contacts?.genere}}</td>
+							<td>{{contacts?.bloodtype}}</td>
+							<td>{{contacts?.race}}</td>
+
+							<td *ngIf="contacts.avatar == null"><img src="assets/images.jpg" /></td>
+
+							<td>
+								<div class="d-flex align-items-center">
+
+									<button title="Edit endorsments"
+										class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3" (click)="edit()">
+										<i class="material-icons">edit</i>
+									</button>
+
+
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- end: Table -->
+		</div>
+		<div *ngIf="length == 0" class="text-center ">
+			<div class="p-5 border h4 rounded   ">No Record Found</div>
+			<hr>
+		</div>
+		<div>
+			<app-pagination *ngIf="length" [childMessage]="length" [index]="index"
+				(messageEvent)="receiveMessage($event)">
+			</app-pagination>
+		</div>
+	</div>
+</div>
